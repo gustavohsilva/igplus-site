@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IgPlus - Sistema de Cadastro de Membros</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f9f9f9;
+    }
+    header {
+      background: #343a40;
+      padding: 20px;
+      color: white;
+      text-align: center;
+    }
+    .logo {
+      max-width: 100px;
+      display: block;
+      margin: 0 auto 10px;
+    }
+    .carrossel {
+      background: #ffc107;
+      color: #000;
+      text-align: center;
+      padding: 10px;
+      font-weight: bold;
+      font-size: 1rem;
+    }
+    .produto {
+      padding: 30px;
+      max-width: 900px;
+      margin: auto;
+      background: white;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      margin-top: 30px;
+      border-radius: 10px;
+    }
+    .planos {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .plano {
+      flex: 1;
+      min-width: 250px;
+      background: #e9ecef;
+      border-radius: 10px;
+      padding: 20px;
+      text-align: center;
+    }
+    .plano h3 { margin-top: 0; }
+    .btn {
+      background-color: #28a745;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      display: inline-block;
+      margin-top: 10px;
+    }
+    .aviso-demo {
+      color: red;
+      font-weight: bold;
+      text-align: center;
+      margin-top: 20px;
+    }
+    .depoimentos {
+      background: #fff;
+      margin: 40px auto;
+      padding: 30px;
+      max-width: 900px;
+      border-radius: 10px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    }
+    .depoimentos h2 { text-align: center; }
+    .depo-card {
+      background: #f1f1f1;
+      border-radius: 10px;
+      padding: 20px;
+      margin: 15px 0;
+    }
+    footer {
+      background: #343a40;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="d1e0323b-6131-4cba-ac85-30809e77dbe2.png" class="logo" alt="Logo IgPlus" />
+    <h1>IgPlus - Sistema de Cadastro de Membros para Igrejas</h1>
+  </header>
+
+  <div class="carrossel" id="carrossel">João de São Paulo acabou de comprar o plano anual!</div>
+
+  <div class="produto">
+    <h2>Escolha seu plano:</h2>
+    <div class="planos">
+      <div class="plano">
+        <h3>Mensal</h3>
+        <p>R$ 29,90</p>
+        <a class="btn" href="#">Assinar</a>
+      </div>
+      <div class="plano">
+        <h3>Trimestral</h3>
+        <p>R$ 79,90</p>
+        <a class="btn" href="#">Assinar</a>
+      </div>
+      <div class="plano">
+        <h3>Anual</h3>
+        <p>R$ 279,90</p>
+        <a class="btn" href="#">Assinar</a>
+      </div>
+    </div>
+    <div class="aviso-demo">⚠️ Versão gratuita permite apenas 2 membros cadastrados!</div>
+    <div style="text-align: center; margin-top: 20px;">
+      <a href="#" class="btn" style="background: #007bff;">Usar Versão Gratuita</a>
+      <a href="#" class="btn" style="background: #6c757d;">Baixar Versão Demo</a>
+    </div>
+  </div>
+
+  <div class="depoimentos">
+    <h2>O que dizem nossos clientes</h2>
+    <div class="depo-card">
+      <p><strong>Maria (MG):</strong> "Sistema excelente, fácil de usar e salvou nossa secretaria!"</p>
+    </div>
+    <div class="depo-card">
+      <p><strong>Roberto (SP):</strong> "Controle de membros como nunca vi antes. Recomendo!"</p>
+    </div>
+    <div class="depo-card">
+      <p><strong>Pr. Lucas (PR):</strong> "O plano anual valeu cada centavo. Parabéns pela ferramenta!"</p>
+    </div>
+  </div>
+
+  <footer>
+    <p>IgPlus © 2025 - Todos os direitos reservados</p>
+    <p>Contato: suporte@igplus.com.br | WhatsApp: (16) 98864-3064</p>
+  </footer>
+
+  <script>
+    const nomes = [
+      "João de São Paulo",
+      "Ana de Belo Horizonte",
+      "Carlos de Curitiba",
+      "Rosa de Recife",
+      "Pedro de Brasília"
+    ];
+    let i = 0;
+    setInterval(() => {
+      document.getElementById("carrossel").innerText = nomes[i] + " acabou de comprar o plano anual!";
+      i = (i + 1) % nomes.length;
+    }, 5000);
+  </script>
+</body>
+</html>
